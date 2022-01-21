@@ -10,8 +10,8 @@ print(length)
 print("B Part")
 print(input_str[::-1])
 # c)Slice Function to obtain "a case sensitive"
-#Length of substring to be stored
 print("C Part")
+#Length of substring to be stored
 length_substring=len("a case sensitive")
 #Initial letter index
 initialofsubstring=input_str.index('a')
@@ -34,16 +34,16 @@ print(input_str.replace(' ',''))
 
 #Ques 2
 print("Question 2")
-name=input("Enter Your Name:\n")
-sid=input("Enter your SID:\n")
-dept_name=input("Enter Your Department:\n")
-cgpa=input("Enter Your CGPA:\n")
+name="Ujjawal Gupta"
+sid="21103079"
+dept_name="CSE"
+cgpa="9.9"
 print("Hey,",name,"Here!")
 print("My SID is",int(sid))
-print("I am from",dept_name,"department and my CGPA is","{:.2}".format(float(cgpa)))
+print("I am from",dept_name,"department and my CGPA is",float(cgpa))
 
 
-#ques3
+#Ques3
 print("Question 3")
 a=56
 b=10

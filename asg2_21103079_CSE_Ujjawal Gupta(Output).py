@@ -16,14 +16,6 @@ E Part
 F Part
 Pythonisacasesensitivelanguage
 Question 2
-Enter Your Name:
-Ujjawal Gupta
-Enter your SID:
-21103079
-Enter Your Department:
-CSE
-Enter Your CGPA:
-9.9
 Hey, Ujjawal Gupta Here!
 My SID is 21103079
 I am from CSE department and my CGPA is 9.9
@@ -44,7 +36,7 @@ The Greatest Number is:
 54
 Question 5
 Enter A String:
-Hi My name is Ujjawal
+Hi my name is ujjawal
 Yes
 Question 6
 Enter The Side 1:
@@ -52,7 +44,7 @@ Enter The Side 1:
 Enter The Side 2:
 12
 Enter the Side 3:
-15
+7
 If the triangle can be formed?
 Yes
 >>> 
