@@ -33,109 +33,26 @@ month_30=[4,6,9,11] #The list of months having 30 days
 month_31=[1,3,5,7,8,10] #the list of months having 31 days
 month_dec=12 #the December month is taken seperately
 
+if(year>=1800 and year<=2025):
+    if (year % 100 == 0 and year % 400 == 0):  # conditional is applied to check for leap yaer in case of year which are multiple of hundred
+        if month == 2:  # to check whether input month if feb or month=2
 
-if(year%100==0 and year%400==0): #conditional is applied to check for leap yaer in case of year which are multiple of hundred
-    if month==2 : # to check whether input month if feb or month=2
-        if day==29 : #in feb there are 29 days in leap year so to check whether the day is 29
-            print("1/0"+str(month+1)+"/"+str(year)) #the first day of next month is printed
-        else:
-            print(str(day+1)+"/0"+str(month)+"/"+str(year)) #the next day of given month is printed
-    elif month in month_31:  # if the month is containing 31 days
-        if day == 31:  # if the day is last day of month
-            if(month+1<10): # Conditional added to check if next month is less than 10
+            if day == 29:  # in feb there are 29 days in leap year so to check whether the day is 29
                 print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-            else:
-                print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-        else:
-            if (month < 10): #Conditional added to check if given month is less than 10
-                print(str(day+1)+"/0" + str(month) + "/" + str(year))  # the next day of given month is printed
-            else:
-                print(str(day+1)+"/" + str(month) + "/" + str(year))  # the next day of given month is printed
-    elif month in month_30:  # if the month is containing 30 days
-
-        if day == 30:  # if the day is last day of month
-
-            if (month + 1 < 10):  # Conditional added to check if next month is less than 10
-
-                print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-
-            else:
-
-                print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-
-        else:
-
-            if (month < 10): #Conditional added to check if given month is less than 10
-                print(str(day+1)+"/0" + str(month) + "/" + str(year))  # the next day of given month is printed
-            else:
-                print(str(day+1)+"/" + str(month) + "/" + str(year))  # the next day of given month is printed
-    elif month==12: #if the month is last month of year
-        if day==31: #if the day is last day of the given month
-            print("1/01/"+str(year+1)) #the first day of the first month of next year is printed
-        else:
-            print(str(day + 1) + "/" + str(month) + "/" + str(year))  #the next day of given month is printed
-
-elif(year%100==0 and year%400!=0): #conditional is applied to check for non leap yaer in case of year which are multiple of hundred
-    if month==2 :# to check whether input month if feb or month=2
-        if day==28 :# in feb there are 28 days in non leap year so to check whether the day is 28
-            print("1/0"+str(month+1)+"/"+str(year)) # the first day of next month is printed
-        else:
-            print(str(day+1)+"/0"+str(month)+"/"+str(year))# the next day of given month is printed
-    elif month in month_31:  # if the month is containing 31 days
-        if day == 31:  # if the day is last day of month
-            if(month+1<10): # Conditional added to check if next month is less than 10
-                print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-            else:
-                print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-        else:
-            if (month < 10): #Conditional added to check if given month is less than 10
-                print(str(day+1)+"/0" + str(month) + "/" + str(year))  # the next day of given month is printed
-            else:
-                print(str(day+1)+"/" + str(month) + "/" + str(year))  # the next day of given month is printed
-
-    elif month in month_30:  # if the month is containing 30 days
-
-        if day == 30:  # if the day is last day of month
-
-            if (month + 1 < 10):  # Conditional added to check if next month is less than 10
-
-                print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-
-            else:
-
-                print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-
-        else:
-
-            if (month < 10): #Conditional added to check if given month is less than 10
-                print(str(day+1)+"/0" + str(month) + "/" + str(year))  # the next day of given month is printed
-            else:
-                print(str(day+1)+"/" + str(month) + "/" + str(year))  # the next day of given month is printed
-                
-    elif month == 12:  # if the month is last month of year
-        if day == 31:  # if the day is last day of the given month
-            print("1/01/" + str(year + 1))  # the first day of the first month of next year is printed
-        else:
-            print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
-
-elif(year%100!=0 and year%4==0): #conditional is applied to check for leap yaer in case of year which are not multiple of hundred
-    if month == 2:  # to check whether input month if feb or month=2
-        if day == 29:  # in feb there are 29 days in leap year so to check whether the day is 29
-            print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-        else:
-            print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
-    elif month in month_31:  # if the month is containing 31 days
-        if day == 31:  # if the day is last day of month
-            if(month+1<10): # Conditional added to check if next month is less than 10
-                print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-            else:
-                print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-        else:
-            if (month < 10): #Conditional added to check if given month is less than 10
-                print(str(day+1)+"/0" + str(month) + "/" + str(year))  # the next day of given month is printed
-            else:
-                print(str(day+1)+"/" + str(month) + "/" + str(year))  # the next day of given month is printed
-    elif month in month_30:  # if the month is containing 30 days
+            elif(day>=1 and day<29):
+                print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month in month_31:  # if the month is containing 31 days
+            if day == 31:  # if the day is last day of month
+                if (month + 1 < 10):  # Conditional added to check if next month is less than 10
+                    print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+                else:
+                    print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+            elif(day>=1 and day<31):
+                if (month < 10):  # Conditional added to check if given month is less than 10
+                    print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+                else:
+                    print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month in month_30:  # if the month is containing 30 days
 
             if day == 30:  # if the day is last day of month
 
@@ -147,73 +64,158 @@ elif(year%100!=0 and year%4==0): #conditional is applied to check for leap yaer 
 
                     print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
 
-            else:
+            elif(day>=1 and day<30):
 
-                if (month < 10): #Conditional added to check if given month is less than 10
-                    print(str(day+1)+"/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+                if (month < 10):  # Conditional added to check if given month is less than 10
+                    print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
                 else:
-                    print(str(day+1)+"/" + str(month) + "/" + str(year))  # the next day of given month is printed
-    elif month == 12:  # if the month is last month of year
-        if day == 31:  # if the day is last day of the given month
-            print("1/01/" + str(year + 1))  # the first day of the first month of next year is printed
-        else:
-            print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+                    print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month == 12:  # if the month is last month of year
+            if day == 31:  # if the day is last day of the given month
+                print("1/01/" + str(year + 1))  # the first day of the first month of next year is printed
+            elif(day>=1 and day<31):
+                print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
 
-elif(year%100!=0 and year%4!=0):#conditional is applied to check for leap yaer in case of year which are not multiple of hundred
-    if month==2 :# to check whether input month if feb or month=2
-        if day==28 :# in feb there are 28 days in non leap year so to check whether the day is 28
-            print("1/0"+str(month+1)+"/"+str(year)) # the first day of next month is printed
-        else:
-            print(str(day+1)+"/0"+str(month)+"/"+str(year))# the next day of given month is printed
-    elif month in month_31:  # if the month is containing 31 days
-        if day == 31:  # if the day is last day of month
-            if(month+1<10): # Conditional added to check if next month is less than 10
+    elif (year % 100 == 0 and year % 400 != 0):  # conditional is applied to check for non leap yaer in case of year which are multiple of hundred
+        if month == 2:  # to check whether input month if feb or month=2
+
+            if day == 28:  # in feb there are 29 days in leap year so to check whether the day is 29
                 print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-            else:
-                print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
-        else:
-            if (month < 10): #Conditional added to check if given month is less than 10
-                print(str(day+1)+"/0" + str(month) + "/" + str(year))  # the next day of given month is printed
-            else:
-                print(str(day+1)+"/" + str(month) + "/" + str(year))  # the next day of given month is printed
+            elif (day >= 1 and day < 28):
+                print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month in month_31:  # if the month is containing 31 days
+            if day == 31:  # if the day is last day of month
+                if (month + 1 < 10):  # Conditional added to check if next month is less than 10
+                    print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+                else:
+                    print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+            elif (day >= 1 and day < 31):
+                if (month < 10):  # Conditional added to check if given month is less than 10
+                    print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+                else:
+                    print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month in month_30:  # if the month is containing 30 days
 
+            if day == 30:  # if the day is last day of month
 
-    elif month in month_30:  # if the month is containing 30 days
+                if (month + 1 < 10):  # Conditional added to check if next month is less than 10
 
-        if day == 30:  # if the day is last day of month
+                    print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
 
-            if (month + 1 < 10):  # Conditional added to check if next month is less than 10
+                else:
 
+                    print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+
+            elif (day >= 1 and day < 30):
+
+                if (month < 10):  # Conditional added to check if given month is less than 10
+                    print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+                else:
+                    print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month == 12:  # if the month is last month of year
+            if day == 31:  # if the day is last day of the given month
+                print("1/01/" + str(year + 1))  # the first day of the first month of next year is printed
+            elif (day >= 1 and day < 31):
+                print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+
+    elif (year % 100 != 0 and year % 4 == 0):  # conditional is applied to check for leap yaer in case of year which are not multiple of hundred
+        if month == 2:  # to check whether input month if feb or month=2
+
+            if day == 29:  # in feb there are 29 days in leap year so to check whether the day is 29
                 print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+            elif (day >= 1 and day < 29):
+                print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month in month_31:  # if the month is containing 31 days
+            if day == 31:  # if the day is last day of month
+                if (month + 1 < 10):  # Conditional added to check if next month is less than 10
+                    print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+                else:
+                    print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+            elif (day >= 1 and day < 31):
+                if (month < 10):  # Conditional added to check if given month is less than 10
+                    print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+                else:
+                    print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month in month_30:  # if the month is containing 30 days
 
-            else:
+            if day == 30:  # if the day is last day of month
 
-                print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+                if (month + 1 < 10):  # Conditional added to check if next month is less than 10
 
-        else:
+                    print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
 
-            if (month < 10): #Conditional added to check if given month is less than 10
-                print(str(day+1)+"/0" + str(month) + "/" + str(year))  # the next day of given month is printed
-            else:
-                print(str(day+1)+"/" + str(month) + "/" + str(year))  # the next day of given month is printed
+                else:
 
-    elif month == 12:  # if the month is last month of year
-        if day == 31:  # if the day is last day of the given month
-            print("1/01/" + str(year + 1))  # the first day of the first month of next year is printed
-        else:
-            print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+                    print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+
+            elif (day >= 1 and day < 30):
+
+                if (month < 10):  # Conditional added to check if given month is less than 10
+                    print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+                else:
+                    print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month == 12:  # if the month is last month of year
+            if day == 31:  # if the day is last day of the given month
+                print("1/01/" + str(year + 1))  # the first day of the first month of next year is printed
+            elif (day >= 1 and day < 31):
+                print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+
+    elif (year % 100 != 0 and year % 4 != 0):  # conditional is applied to check for leap yaer in case of year which are not multiple of hundred
+        if month == 2:  # to check whether input month if feb or month=2
+
+            if day == 28:  # in feb there are 29 days in leap year so to check whether the day is 29
+                print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+            elif (day >= 1 and day < 28):
+                print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month in month_31:  # if the month is containing 31 days
+            if day == 31:  # if the day is last day of month
+                if (month + 1 < 10):  # Conditional added to check if next month is less than 10
+                    print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+                else:
+                    print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+            elif (day >= 1 and day < 31):
+                if (month < 10):  # Conditional added to check if given month is less than 10
+                    print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+                else:
+                    print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month in month_30:  # if the month is containing 30 days
+
+            if day == 30:  # if the day is last day of month
+
+                if (month + 1 < 10):  # Conditional added to check if next month is less than 10
+
+                    print("1/0" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+
+                else:
+
+                    print("1/" + str(month + 1) + "/" + str(year))  # the first day of next month is printed
+
+            elif (day >= 1 and day < 30):
+
+                if (month < 10):  # Conditional added to check if given month is less than 10
+                    print(str(day + 1) + "/0" + str(month) + "/" + str(year))  # the next day of given month is printed
+                else:
+                    print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+        elif month == 12:  # if the month is last month of year
+            if day == 31:  # if the day is last day of the given month
+                print("1/01/" + str(year + 1))  # the first day of the first month of next year is printed
+            elif (day >= 1 and day < 31):
+                print(str(day + 1) + "/" + str(month) + "/" + str(year))  # the next day of given month is printed
+else:
+    print("Year Out of Range")
+
 print(end="\n")  # executing the other functions on new line
 
 
 #Ques 3
 print("Question 3")
 # The Numbers of which the tuple of squares is to be created
-num=input("Enter The numbers of which you want square of:\n") #Taking the numbers as input from user
-list_num=num.split() #creating a list containg the numbers using split function
+num=input("Enter The numbers of which you want square of seperated by comma:\n") #Taking the numbers as input from user
+list_num=num.split(',') #creating a list containg the numbers using split function
 list_square=[] # creating a new list to store the tuples of number and its square
 
 for item in list_num: # a loop is created to add tuple of the square of number and the number itself
-    list_square.append((int(item),int(item)**2))
+    list_square.append((float(item),float(item)**2))
 
 print(list_square) #print the list of tuples of number and the square of numbers
 print(end="\n")  # executing the other functions on new line
