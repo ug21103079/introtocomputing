@@ -340,24 +340,24 @@ Set_10={1,2,3,4,5,6,7,8,9,10} # Additional Set of first 10 natural numbers is cr
 
 #A part
 Set_a=Set1^Set2 #Set containing elements present in Set1 or Set2 but not both
-print(Set_a) # The Set_a is printed
+print("Set A=",Set_a) # Set_d is printed
 
 #B part
 Set_commonall=Set1&Set2&Set3 # Created a set which contains elements common to all
 Set_b=Set1^Set2^Set3 #Set containing elements which are present in only one set at a time
-print(Set_b) # The Set_b is printed
+print("Set B=",Set_b) # Set_d is printed
 
 #C Part
 Set_c=((Set1&Set2)-Set_commonall)|((Set2&Set3)-Set_commonall)|((Set3&Set1)-Set_commonall) #Set is created containg elements which are present in two sets only
-print(Set_c) # Set_c is printed
+print("Set C=",Set_c) # Set_d is printed
 
 #D Part
 Set_d=Set_10-Set1 # Set is created which contains natural numbers upto 10 which are not in Set1
-print(Set_d) # Set_d is printed
+print("Set D=",Set_d) # Set_d is printed
 
 #E Part
 Set_union=(Set1|Set2|Set3) #Another Set is created which is having elements common to all given three sets in question
 Set_e=Set_10-Set_union # Set is created which contain natural number upto 10 which are not there in Set 1,2,3
-print(Set_e) # Set_e is printed
+print("Set E=",Set_e) # Set_d is printed
 print(end="\n")  # executing the other functions on new line
 
